@@ -35,16 +35,13 @@ a{color:inherit;text-decoration:none}
 ul{list-style:none}
 button{cursor:pointer;border:none;background:none;font:inherit}
 
-/* ── SKIP LINK ── */
 .skip{position:fixed;top:-100%;left:16px;z-index:9999;background:var(--cyan);color:var(--navy-deep);font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:0 0 8px 8px;transition:top .2s}
 .skip:focus{top:0}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
-/* ── CURSOR TRAIL ── */
 .cursor-dot{pointer-events:none;position:fixed;width:6px;height:6px;background:var(--cyan);border-radius:50%;transform:translate(-50%,-50%);z-index:9998;transition:opacity .3s;opacity:0}
 .cursor-ring{pointer-events:none;position:fixed;width:32px;height:32px;border:1px solid rgba(0,212,255,.4);border-radius:50%;transform:translate(-50%,-50%);z-index:9997;transition:width .2s,height .2s,opacity .3s;opacity:0}
 
-/* ── TOAST ── */
 .toast-wrap{position:fixed;bottom:28px;right:28px;z-index:8000;display:flex;flex-direction:column;gap:10px;pointer-events:none}
 .toast{background:var(--navy-card);border:1px solid var(--navy-border);border-radius:var(--r);padding:14px 20px;font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:10px;transform:translateX(120%);transition:transform .35s var(--ease),opacity .35s;opacity:0;pointer-events:all;max-width:320px}
 .toast.show{transform:translateX(0);opacity:1}
@@ -52,10 +49,8 @@ button{cursor:pointer;border:none;background:none;font:inherit}
 .toast-close{margin-left:auto;color:var(--muted);font-size:.9rem;padding:0 4px;cursor:pointer}
 .toast-close:hover{color:var(--text)}
 
-/* ── PARTICLES ── */
 #particles-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
 
-/* ── LAYOUT ── */
 .layout{display:flex;min-height:100vh;position:relative;z-index:1}
 
 /* ── SIDEBAR ── */
@@ -93,7 +88,6 @@ button{cursor:pointer;border:none;background:none;font:inherit}
 .mob-drawer{display:none;position:fixed;top:56px;left:0;right:0;z-index:190;background:var(--navy);border-bottom:1px solid var(--navy-border);padding:8px 0 16px;flex-direction:column}
 .mob-drawer.open{display:flex}
 
-/* ── MAIN ── */
 .main{margin-left:var(--sidebar-w);flex:1;min-width:0}
 
 @media(max-width:860px){
@@ -104,7 +98,6 @@ button{cursor:pointer;border:none;background:none;font:inherit}
   footer{margin-left:0!important}
 }
 
-/* ── SECTIONS ── */
 .sec{padding:clamp(56px,8vw,96px) clamp(24px,6vw,72px);border-bottom:1px solid var(--navy-border)}
 .sec:last-of-type{border-bottom:none}
 .eyebrow{font-family:var(--font-m);font-size:.69rem;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
@@ -114,15 +107,12 @@ h2.stitle{font-family:var(--font-d);font-size:clamp(1.7rem,3.5vw,2.6rem);font-we
 #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,96px) clamp(24px,6vw,72px);position:relative;overflow:hidden;border-bottom:1px solid var(--navy-border)}
 #hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,212,255,.18) 1px,transparent 1px);background-size:34px 34px;opacity:.35;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:760px}
-
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:.72rem;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(0,212,255,.22);border-radius:20px;padding:5px 14px;margin-bottom:24px;letter-spacing:.05em}
 .badge-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:pulse-dot 2s ease-in-out infinite}
-
 h1.hname{font-family:var(--font-d);font-size:clamp(2.6rem,7vw,5rem);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
 h1.hname span{color:var(--cyan)}
 .hsub{font-size:clamp(.98rem,2.2vw,1.15rem);color:var(--muted);max-width:540px;margin-bottom:44px;line-height:1.75}
 
-/* STAT COUNTERS */
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--navy-border);border:1px solid var(--navy-border);border-radius:var(--r);overflow:hidden;margin-bottom:44px;max-width:560px}
 .stat-blk{background:var(--navy-card);padding:20px 22px;display:flex;flex-direction:column;gap:5px;transition:background .2s,transform .2s;cursor:default}
 .stat-blk:hover{background:#1f3468}
@@ -139,7 +129,6 @@ h1.hname span{color:var(--cyan)}
 .btn-ghost{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(0,212,255,.2)}
 .btn-ghost:hover{background:rgba(0,212,255,.18)}
 
-/* Typing cursor */
 .typed-cursor{display:inline-block;width:3px;height:.85em;background:var(--cyan);margin-left:2px;vertical-align:-.05em;animation:blink .7s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
@@ -169,7 +158,6 @@ h1.hname span{color:var(--cyan)}
 .tag{font-family:var(--font-m);font-size:.65rem;padding:3px 9px;border-radius:4px;background:var(--navy-card);border:1px solid var(--navy-border);color:var(--muted);transition:all .18s;cursor:default}
 .tag:hover{color:var(--cyan);border-color:rgba(0,212,255,.3);background:var(--cyan-dim)}
 
-/* ── SKILL BAR ── */
 .skill-bars{display:flex;flex-direction:column;gap:14px;margin-top:32px}
 .sbar-row{display:flex;flex-direction:column;gap:6px}
 .sbar-meta{display:flex;justify-content:space-between;font-size:.8rem}
@@ -241,8 +229,6 @@ h1.hname span{color:var(--cyan)}
 @media(max-width:680px){.contact-grid{grid-template-columns:1fr;gap:32px}}
 .contact-lead{font-size:.98rem;color:var(--muted);line-height:1.8;margin-bottom:28px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
-
-/* CONTACT FORM */
 .contact-form{display:flex;flex-direction:column;gap:14px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:500px){.form-row{grid-template-columns:1fr}}
@@ -253,8 +239,6 @@ h1.hname span{color:var(--cyan)}
 .form-input::placeholder,.form-textarea::placeholder{color:var(--muted2)}
 .form-textarea{min-height:110px}
 .submit-btn{align-self:flex-start}
-
-/* CONTACT LINKS */
 .clink-list{display:flex;flex-direction:column;gap:12px}
 .clink{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--navy-card);border:1px solid var(--navy-border);border-radius:var(--r);transition:border-color .2s,background .2s}
 .clink:hover{border-color:rgba(0,212,255,.3);background:#1f3468}
@@ -262,7 +246,6 @@ h1.hname span{color:var(--cyan)}
 .clink-lbl{font-size:.7rem;color:var(--muted2);font-family:var(--font-m);margin-bottom:2px}
 .clink-val{font-size:.87rem;color:var(--text);font-weight:500}
 
-/* ── FOOTER ── */
 footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);padding:24px clamp(24px,6vw,72px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-left:var(--sidebar-w)}
 .footer-l{font-family:var(--font-d);font-weight:700;font-size:.88rem}
 .footer-r{font-size:.75rem;color:var(--muted2)}
@@ -270,7 +253,6 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
 .footer-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
 .footer-links a:hover{color:var(--cyan)}
 
-/* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
@@ -278,16 +260,14 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
   .reveal{opacity:1;transform:none}
 }
 
-/* ── SCROLL TO TOP ── */
 .scroll-top{position:fixed;bottom:28px;right:28px;width:42px;height:42px;background:var(--navy-card);border:1px solid var(--navy-border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);z-index:500;opacity:0;transform:translateY(16px);transition:all .3s var(--ease);pointer-events:none}
 .scroll-top.show{opacity:1;transform:none;pointer-events:all}
 .scroll-top:hover{background:var(--cyan-dim);border-color:var(--cyan)}
 
-/* ── LIVE CLOCK ── */
 .live-clock{font-family:var(--font-m);font-size:.72rem;color:var(--muted);padding:8px 26px;border-bottom:1px solid var(--navy-border);margin-bottom:4px;display:flex;align-items:center;gap:7px}
 .clock-dot{width:5px;height:5px;background:var(--warn);border-radius:50%}
 
-/* ── MODAL ── */
+/* ── CV MODAL ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(8,15,34,.85);backdrop-filter:blur(6px);z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.open{opacity:1;pointer-events:all}
 .modal{background:var(--navy);border:1px solid var(--navy-border);border-radius:14px;padding:32px;max-width:480px;width:calc(100% - 40px);position:relative;transform:scale(.95) translateY(20px);transition:transform .3s var(--ease)}
@@ -297,6 +277,12 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
 .modal-title{font-family:var(--font-d);font-size:1.3rem;font-weight:700;margin-bottom:8px}
 .modal-sub{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
 .modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ── CV download progress ── */
+.cv-progress{display:none;align-items:center;gap:10px;margin-top:14px;font-size:.82rem;color:var(--muted)}
+.cv-progress.show{display:flex}
+.cv-progress-bar{flex:1;height:3px;background:var(--navy-border);border-radius:2px;overflow:hidden}
+.cv-progress-fill{height:100%;background:var(--cyan);width:0;transition:width .8s ease;border-radius:2px}
 </style>
 </head>
 <body>
@@ -310,24 +296,33 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
   <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
 </button>
 
-<!-- CV MODAL -->
+<!-- ════ CV DOWNLOAD MODAL ════ -->
 <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal">
     <button class="modal-close" id="modalClose" aria-label="Close dialog">✕</button>
     <div style="font-size:2rem;margin-bottom:12px">📄</div>
     <h2 class="modal-title" id="modal-title">Download CV</h2>
-    <p class="modal-sub">To download Aman's CV, you can visit the portfolio site or reach out directly. The CV includes full details on experience, skills, and certifications.</p>
+    <p class="modal-sub">Choose how you'd like to get Aman's CV. You can download it directly or request the latest version via email.</p>
     <div class="modal-actions">
-      <a href="mailto:singhaman123116@gmail.com?subject=CV Request" class="btn btn-primary" onclick="closeModal()">
+      <!-- PRIMARY: triggers JS CV download -->
+      <button class="btn btn-primary" id="downloadCvBtn" onclick="downloadCV()">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        Download CV
+      </button>
+      <a href="mailto:singhaman123116@gmail.com?subject=CV Request — Aman Singh&body=Hi Aman,%0A%0AI came across your portfolio and would like to request your latest CV.%0A%0AThank you!" class="btn btn-outline" onclick="closeModal()">
         <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
         Request via Email
       </a>
-      <a href="https://aman123116.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-outline" onclick="closeModal()">Visit Portfolio</a>
+    </div>
+    <div class="cv-progress" id="cvProgress">
+      <span>Preparing CV…</span>
+      <div class="cv-progress-bar"><div class="cv-progress-fill" id="cvProgressFill"></div></div>
     </div>
   </div>
 </div>
 
 <div class="layout">
+
 <!-- ════ SIDEBAR ════ -->
 <aside class="sidebar" id="sidebar" aria-label="Site navigation">
   <div class="sidebar-logo">
@@ -343,34 +338,34 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
   </div>
   <nav class="sidebar-nav" aria-label="Main navigation">
     <p class="nav-grp-label">Navigate</p>
-    <a href="#hero"           class="nav-item active" data-section="hero" aria-current="page">
+    <a href="#hero" class="nav-item active" data-section="hero" aria-current="page">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
       Home
     </a>
-    <a href="#about"          class="nav-item" data-section="about">
+    <a href="#about" class="nav-item" data-section="about">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
       About
     </a>
-    <a href="#skills"         class="nav-item" data-section="skills">
+    <a href="#skills" class="nav-item" data-section="skills">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
       Skills
       <span class="nav-badge">6</span>
     </a>
-    <a href="#experience"     class="nav-item" data-section="experience">
+    <a href="#experience" class="nav-item" data-section="experience">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/></svg>
       Experience
     </a>
-    <a href="#projects"       class="nav-item" data-section="projects">
+    <a href="#projects" class="nav-item" data-section="projects">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/></svg>
       Projects
-      <span class="nav-badge">3</span>
+      <span class="nav-badge">6</span>
     </a>
     <a href="#certifications" class="nav-item" data-section="certifications">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
       Certifications
       <span class="nav-badge">5</span>
     </a>
-    <a href="#contact"        class="nav-item" data-section="contact">
+    <a href="#contact" class="nav-item" data-section="contact">
       <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
       Contact
     </a>
@@ -417,7 +412,6 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
     <p class="hero-badge"><span class="badge-dot" aria-hidden="true"></span>Available for opportunities · Mumbai</p>
     <h1 class="hname" id="hero-name">Hi, I'm<br><span id="typedName"></span><span class="typed-cursor" aria-hidden="true"></span></h1>
     <p class="hsub" id="typedRole"></p>
-
     <div class="stat-grid" role="list" aria-label="Key stats">
       <div class="stat-blk" role="listitem">
         <div class="stat-val"><span class="counter" data-target="22000" data-fmt="k" data-suffix="+">0</span></div>
@@ -428,11 +422,10 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
         <div class="stat-lbl">Cinema screens</div>
       </div>
       <div class="stat-blk" role="listitem">
-        <div class="stat-val"><span class="counter" data-target="5">0</span></div>
-        <div class="stat-lbl">Certifications</div>
+        <div class="stat-val"><span class="counter" data-target="6">0</span></div>
+        <div class="stat-lbl">Projects built</div>
       </div>
     </div>
-
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">
         <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
@@ -534,30 +527,13 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
       </ul>
     </article>
   </div>
-
-  <!-- PROFICIENCY BARS -->
   <div class="skill-bars reveal" aria-label="Skill proficiency levels">
     <h3 style="font-family:var(--font-d);font-size:1rem;font-weight:600;margin-bottom:4px;color:var(--muted)">Proficiency</h3>
-    <div class="sbar-row">
-      <div class="sbar-meta"><span class="sbar-name">Advanced Excel</span><span class="sbar-pct">95%</span></div>
-      <div class="sbar-track"><div class="sbar-fill" data-w="95"></div></div>
-    </div>
-    <div class="sbar-row">
-      <div class="sbar-meta"><span class="sbar-name">Power BI</span><span class="sbar-pct">88%</span></div>
-      <div class="sbar-track"><div class="sbar-fill" data-w="88"></div></div>
-    </div>
-    <div class="sbar-row">
-      <div class="sbar-meta"><span class="sbar-name">SQL</span><span class="sbar-pct">78%</span></div>
-      <div class="sbar-track"><div class="sbar-fill" data-w="78"></div></div>
-    </div>
-    <div class="sbar-row">
-      <div class="sbar-meta"><span class="sbar-name">Data Analysis & MIS</span><span class="sbar-pct">92%</span></div>
-      <div class="sbar-track"><div class="sbar-fill" data-w="92"></div></div>
-    </div>
-    <div class="sbar-row">
-      <div class="sbar-meta"><span class="sbar-name">Data Visualization</span><span class="sbar-pct">85%</span></div>
-      <div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div>
-    </div>
+    <div class="sbar-row"><div class="sbar-meta"><span class="sbar-name">Advanced Excel</span><span class="sbar-pct">95%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="95"></div></div></div>
+    <div class="sbar-row"><div class="sbar-meta"><span class="sbar-name">Power BI</span><span class="sbar-pct">88%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="88"></div></div></div>
+    <div class="sbar-row"><div class="sbar-meta"><span class="sbar-name">SQL</span><span class="sbar-pct">78%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="78"></div></div></div>
+    <div class="sbar-row"><div class="sbar-meta"><span class="sbar-name">Data Analysis & MIS</span><span class="sbar-pct">92%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="92"></div></div></div>
+    <div class="sbar-row"><div class="sbar-meta"><span class="sbar-name">Data Visualization</span><span class="sbar-pct">85%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div></div>
   </div>
 </section>
 
@@ -577,8 +553,8 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
         <li class="tl-bullet">Design, automate, and maintain daily, weekly, and monthly MIS reports in Advanced Excel — improving delivery timelines and accuracy.</li>
         <li class="tl-bullet">Analyse large operational datasets to identify trends, anomalies, and KPIs across India's cinema network.</li>
         <li class="tl-bullet">Build automated solutions using Pivot Tables, Power Query, and data validation, cutting manual effort on recurring reports.</li>
-        <li class="tl-bullet">Build and maintain Power BI dashboards for operational reporting and stakeholder KPI tracking.</li>
-        <li class="tl-bullet">Execute SQL queries for data retrieval, cross-system validation, and ad-hoc reporting.</li>
+        <li class="tl-bullet">Perform data cleaning and quality checks to ensure reporting integrity and consistency across business units.</li>
+        <li class="tl-bullet">Collaborate with cross-functional teams to collect, validate, and consolidate operational data for reporting.</li>
         <li class="tl-bullet">Support technical ops with Linux server monitoring and incident logging to maintain data pipeline continuity.</li>
       </ul>
     </div>
@@ -594,10 +570,12 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="powerbi">Power BI</button>
     <button class="filter-btn" data-filter="excel">Excel</button>
-    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="sql">SQL</button>
   </div>
 
   <div class="proj-grid" id="projGrid">
+
+    <!-- PROJECT 1: E-Commerce -->
     <article class="proj-card reveal" data-tags="powerbi excel" aria-label="E-Commerce Sales Analysis Dashboard">
       <div class="proj-top">
         <div class="proj-ico" aria-hidden="true">🛒</div>
@@ -615,39 +593,101 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
       </div>
     </article>
 
+    <!-- PROJECT 2: Adventure Works Accessibility -->
     <article class="proj-card reveal" data-tags="powerbi" aria-label="Adventure Works Accessible Sales Report">
       <div class="proj-top">
         <div class="proj-ico" aria-hidden="true">♿</div>
         <div class="proj-tools"><span class="ptool">Power BI</span><span class="ptool">Accessibility</span></div>
       </div>
       <h3>Adventure Works Accessible Sales Report</h3>
-      <p class="proj-desc">Redesigned a regional sales report in Power BI with full accessibility compliance — screen readers, keyboard navigation, and low-vision support.</p>
+      <p class="proj-desc">Redesigned a regional quarterly sales report in Power BI with full accessibility compliance — built for screen readers, keyboard navigation, and low-vision users.</p>
       <ul class="proj-hls">
         <li class="proj-hl">Alt text on all visuals for complete screen reader compatibility</li>
-        <li class="proj-hl">High-contrast palette & chart markers for low-vision users</li>
+        <li class="proj-hl">High-contrast colours & chart markers for low-vision users</li>
         <li class="proj-hl">Optimised tab order — fully usable without a mouse</li>
+        <li class="proj-hl">Accessible theme with clearer fonts and better contrast ratios</li>
       </ul>
       <div class="proj-card-footer">
-        <button class="btn btn-ghost proj-btn" onclick="showToast('♿','Accessibility-first design — details on the live portfolio!','info')">View Details</button>
+        <button class="btn btn-ghost proj-btn" onclick="showToast('♿','Accessibility-first Power BI design!','info')">View Details</button>
       </div>
     </article>
 
-    <article class="proj-card reveal" data-tags="web" aria-label="Personal Portfolio Website">
+    <!-- PROJECT 3: Excel Executive Data Summary -->
+    <article class="proj-card reveal" data-tags="excel" aria-label="Excel Executive Data Summary">
+      <div class="proj-top">
+        <div class="proj-ico" aria-hidden="true">📊</div>
+        <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">SUMIF</span><span class="ptool">YoY Analysis</span></div>
+      </div>
+      <h3>Excel Executive Data Summary</h3>
+      <p class="proj-desc">Built an executive-level data summary to analyse Q1 month-wise profit margin performance, comparing current year vs previous year results with full business logic validation.</p>
+      <ul class="proj-hls">
+        <li class="proj-hl">Data aggregation using SUMIF and SUMIFS functions</li>
+        <li class="proj-hl">Year-over-Year (YoY) percentage change analysis</li>
+        <li class="proj-hl">Business logic validation using IF functions</li>
+        <li class="proj-hl">Executive-ready formatting & monthly/quarterly performance view</li>
+      </ul>
+      <div class="proj-card-footer">
+        <button class="btn btn-ghost proj-btn" onclick="showToast('📋','Excel executive reporting project!','info')">View Details</button>
+      </div>
+    </article>
+
+    <!-- PROJECT 4: Sales Executive Performance Dashboard -->
+    <article class="proj-card reveal" data-tags="excel" aria-label="Sales Executive Performance Dashboard">
+      <div class="proj-top">
+        <div class="proj-ico" aria-hidden="true">🏙️</div>
+        <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">VBA</span><span class="ptool">Macros</span></div>
+      </div>
+      <h3>Sales Executive Performance Dashboard</h3>
+      <p class="proj-desc">Multi-city Excel dashboard analysing Sales Executive performance across Chennai, Delhi, Patna, and Ranchi — automated with VBA Macros for dynamic interactivity.</p>
+      <ul class="proj-hls">
+        <li class="proj-hl">4 interactive city dashboards with Macros & VBA automation</li>
+        <li class="proj-hl">Slicers to switch views seamlessly across locations</li>
+        <li class="proj-hl">Target vs Actual performance analysis with Bar, Line & Pie Charts</li>
+        <li class="proj-hl">Pivot Tables, Slicers & fully automated user-friendly interface</li>
+      </ul>
+      <div class="proj-card-footer">
+        <button class="btn btn-ghost proj-btn" onclick="showToast('🏙️','Multi-city VBA-powered dashboard!','info')">View Details</button>
+      </div>
+    </article>
+
+    <!-- PROJECT 5: Tailwind Traders BI Capstone -->
+    <article class="proj-card reveal" data-tags="powerbi excel" aria-label="Tailwind Traders BI Solution">
+      <div class="proj-top">
+        <div class="proj-ico" aria-hidden="true">🏢</div>
+        <div class="proj-tools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Excel</span><span class="ptool">Power Query</span></div>
+      </div>
+      <h3>Tailwind Traders BI Solution <span style="font-size:.75rem;color:var(--muted);font-weight:400">(Microsoft Capstone)</span></h3>
+      <p class="proj-desc">End-to-end BI solution for a global retail company — from raw Excel data preparation to a published Executive Dashboard in Power BI Service with automated alerts.</p>
+      <ul class="proj-hls">
+        <li class="proj-hl">Engineered sales data pipeline in Excel — Cost, Revenue, Tax, Profit calculations</li>
+        <li class="proj-hl">Configured 4 multi-source datasets with 100% data quality validation in Power Query</li>
+        <li class="proj-hl">Built 6-table relational model with DAX Calendar & multi-currency Sales in USD table</li>
+        <li class="proj-hl">Time-intelligence DAX measures (Yearly, Quarterly, YTD Profit Margin) optimised to sub-200ms</li>
+        <li class="proj-hl">Published mobile-optimised Executive Dashboard with revenue alerts & weekly subscriptions</li>
+      </ul>
+      <div class="proj-card-footer">
+        <button class="btn btn-ghost proj-btn" onclick="showToast('🏢','Microsoft Power BI Certification Capstone!','info')">View Details</button>
+      </div>
+    </article>
+
+    <!-- PROJECT 6: Personal Portfolio -->
+    <article class="proj-card reveal" data-tags="excel" aria-label="Personal Portfolio Website">
       <div class="proj-top">
         <div class="proj-ico" aria-hidden="true">💻</div>
-        <div class="proj-tools"><span class="ptool">HTML</span><span class="ptool">CSS</span><span class="ptool">GitHub</span></div>
+        <div class="proj-tools"><span class="ptool">HTML</span><span class="ptool">CSS</span><span class="ptool">GitHub Pages</span></div>
       </div>
       <h3>Personal Portfolio Website</h3>
       <p class="proj-desc">Data-dashboard themed portfolio site showcasing projects, skills, and certifications — designed, built, and deployed from scratch.</p>
       <ul class="proj-hls">
-        <li class="proj-hl">Responsive layout, hosted live on GitHub Pages</li>
-        <li class="proj-hl">Demonstrates web publishing & version control</li>
-        <li class="proj-hl">aman123116.github.io</li>
+        <li class="proj-hl">Responsive layout with animated counters & live IST clock</li>
+        <li class="proj-hl">Particle canvas background & custom cursor trail</li>
+        <li class="proj-hl">Hosted live on GitHub Pages</li>
       </ul>
       <div class="proj-card-footer">
         <a href="https://aman123116.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-ghost proj-btn" onclick="showToast('🌐','Opening live site…','success')">Live Site ↗</a>
       </div>
     </article>
+
   </div>
 </section>
 
@@ -689,8 +729,6 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
         </a>
         <a href="https://linkedin.com/in/aman-singh123114" target="_blank" rel="noopener noreferrer" class="btn btn-outline" onclick="showToast('💼','Opening LinkedIn…','info')">LinkedIn ↗</a>
       </div>
-
-      <!-- CONTACT FORM -->
       <div class="contact-form" id="contactForm" style="margin-top:28px">
         <div class="form-row">
           <div class="form-group">
@@ -716,7 +754,6 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
         </button>
       </div>
     </div>
-
     <div class="clink-list reveal" aria-label="Contact channels">
       <a href="mailto:singhaman123116@gmail.com" class="clink" onclick="showToast('📧','Email client opening…','success')">
         <div class="clink-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
@@ -738,8 +775,8 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
   </div>
 </section>
 
-</main><!-- /main -->
-</div><!-- /layout -->
+</main>
+</div>
 
 <footer>
   <span class="footer-l">Aman Singh</span>
@@ -754,60 +791,43 @@ footer{background:var(--navy-deep);border-top:1px solid var(--navy-border);paddi
 <script>
 /* ═══════════════════ PARTICLES ═══════════════════ */
 (function(){
-  const c = document.getElementById('particles-canvas');
-  const ctx = c.getContext('2d');
-  let W, H, pts = [];
-  const N = 55, CONN = 110;
-
-  function resize(){ W = c.width = window.innerWidth; H = c.height = window.innerHeight; }
-  resize(); window.addEventListener('resize', resize);
-
-  for(let i=0;i<N;i++) pts.push({
-    x:Math.random()*1920, y:Math.random()*1080,
-    vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25
-  });
-
+  const c=document.getElementById('particles-canvas');
+  const ctx=c.getContext('2d');
+  let W,H,pts=[];
+  const N=55,CONN=110;
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  resize();window.addEventListener('resize',resize);
+  for(let i=0;i<N;i++) pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25});
   function draw(){
     ctx.clearRect(0,0,W,H);
     for(let i=0;i<pts.length;i++){
       const p=pts[i];
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0||p.x>W) p.vx*=-1;
-      if(p.y<0||p.y>H) p.vy*=-1;
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,1.5,0,Math.PI*2);
-      ctx.fillStyle='rgba(0,212,255,.5)';
-      ctx.fill();
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,1.5,0,Math.PI*2);ctx.fillStyle='rgba(0,212,255,.5)';ctx.fill();
       for(let j=i+1;j<pts.length;j++){
-        const q=pts[j], d=Math.hypot(p.x-q.x,p.y-q.y);
-        if(d<CONN){
-          ctx.beginPath();
-          ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle=`rgba(0,212,255,${(1-d/CONN)*.12})`;
-          ctx.lineWidth=.8; ctx.stroke();
-        }
+        const q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+        if(d<CONN){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(0,212,255,${(1-d/CONN)*.12})`;ctx.lineWidth=.8;ctx.stroke();}
       }
     }
     requestAnimationFrame(draw);
   }
-  if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches) draw();
+  if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches)draw();
 })();
 
 /* ═══════════════════ CURSOR ═══════════════════ */
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let rx=0, ry=0;
-document.addEventListener('mousemove', e=>{
-  dot.style.left=e.clientX+'px'; dot.style.top=e.clientY+'px';
-  dot.style.opacity='1'; ring.style.opacity='1';
-  rx+=(e.clientX-rx)*.12; ry+=(e.clientY-ry)*.12;
-  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+const dot=document.getElementById('cursorDot');
+const ring=document.getElementById('cursorRing');
+let rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px';dot.style.opacity='1';ring.style.opacity='1';
+  rx+=(e.clientX-rx)*.12;ry+=(e.clientY-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';
 });
-function animRing(){ rx+=(parseFloat(ring.style.left||0)-rx)*.0; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); }
-document.addEventListener('mouseleave',()=>{ dot.style.opacity='0'; ring.style.opacity='0'; });
+document.addEventListener('mouseleave',()=>{dot.style.opacity='0';ring.style.opacity='0';});
 document.querySelectorAll('a,button,.tag,.stat-blk,.proj-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ ring.style.width='48px'; ring.style.height='48px'; ring.style.borderColor='rgba(0,212,255,.7)'; });
-  el.addEventListener('mouseleave',()=>{ ring.style.width='32px'; ring.style.height='32px'; ring.style.borderColor='rgba(0,212,255,.4)'; });
+  el.addEventListener('mouseenter',()=>{ring.style.width='48px';ring.style.height='48px';ring.style.borderColor='rgba(0,212,255,.7)';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(0,212,255,.4)';});
 });
 
 /* ═══════════════════ LIVE CLOCK ═══════════════════ */
@@ -815,25 +835,24 @@ function updateClock(){
   const d=new Date();
   document.getElementById('liveClock').textContent=d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});
 }
-updateClock(); setInterval(updateClock,1000);
+updateClock();setInterval(updateClock,1000);
 
 /* ═══════════════════ TOAST ═══════════════════ */
-function showToast(icon, msg, type){
+function showToast(icon,msg,type){
   const w=document.getElementById('toastWrap');
   const t=document.createElement('div');
-  t.className='toast';
-  t.setAttribute('role','alert');
+  t.className='toast';t.setAttribute('role','alert');
   t.innerHTML=`<span class="toast-icon">${icon}</span><span>${msg}</span><button class="toast-close" aria-label="Dismiss">✕</button>`;
   t.querySelector('.toast-close').onclick=()=>dismiss(t);
   w.appendChild(t);
-  requestAnimationFrame(()=>{ requestAnimationFrame(()=>t.classList.add('show')); });
-  setTimeout(()=>dismiss(t), 4000);
+  requestAnimationFrame(()=>{requestAnimationFrame(()=>t.classList.add('show'));});
+  setTimeout(()=>dismiss(t),4000);
 }
-function dismiss(t){ t.classList.remove('show'); setTimeout(()=>t.remove(),400); }
+function dismiss(t){t.classList.remove('show');setTimeout(()=>t.remove(),400);}
 
 /* ═══════════════════ SCROLL TOP ═══════════════════ */
 const stBtn=document.getElementById('scrollTop');
-window.addEventListener('scroll',()=>{ stBtn.classList.toggle('show',window.scrollY>400); });
+window.addEventListener('scroll',()=>{stBtn.classList.toggle('show',window.scrollY>400);});
 stBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 /* ═══════════════════ MOBILE NAV ═══════════════════ */
@@ -846,7 +865,7 @@ mobBtn.addEventListener('click',()=>{
   mobBtn.setAttribute('aria-expanded',open);
   sidebar.classList.toggle('mob-open',open);
 });
-function closeMob(){ mobDrawer.classList.remove('open'); mobBtn.classList.remove('open'); mobBtn.setAttribute('aria-expanded','false'); sidebar.classList.remove('mob-open'); }
+function closeMob(){mobDrawer.classList.remove('open');mobBtn.classList.remove('open');mobBtn.setAttribute('aria-expanded','false');sidebar.classList.remove('mob-open');}
 
 /* ═══════════════════ TYPEWRITER ═══════════════════ */
 (function(){
@@ -854,60 +873,55 @@ function closeMob(){ mobDrawer.classList.remove('open'); mobBtn.classList.remove
   const roleEl=document.getElementById('typedRole');
   const name='Aman Singh.';
   const roles=['MIS Executive at UFO Moviez.','a Data Analyst.','a Power BI Developer.','an Excel Automation Specialist.'];
-  let ri=0, ci=0, deleting=false;
-
-  function typeName(cb){
-    if(ci<=name.length){ nameEl.textContent=name.slice(0,ci++); setTimeout(()=>typeName(cb),80); }
-    else cb();
-  }
+  let ri=0,ci=0,deleting=false;
+  function typeName(cb){if(ci<=name.length){nameEl.textContent=name.slice(0,ci++);setTimeout(()=>typeName(cb),80);}else cb();}
   function typeRole(){
     const r=roles[ri];
     if(!deleting){
-      if(ci<=r.length){ roleEl.textContent=r.slice(0,ci++); setTimeout(typeRole,55); }
-      else { deleting=true; setTimeout(typeRole,2200); }
-    } else {
-      if(ci>0){ roleEl.textContent=r.slice(0,--ci); setTimeout(typeRole,30); }
-      else { deleting=false; ri=(ri+1)%roles.length; setTimeout(typeRole,400); }
+      if(ci<=r.length){roleEl.textContent=r.slice(0,ci++);setTimeout(typeRole,55);}
+      else{deleting=true;setTimeout(typeRole,2200);}
+    }else{
+      if(ci>0){roleEl.textContent=r.slice(0,--ci);setTimeout(typeRole,30);}
+      else{deleting=false;ri=(ri+1)%roles.length;setTimeout(typeRole,400);}
     }
   }
-  ci=0; typeName(()=>{ ci=0; setTimeout(typeRole,600); });
+  ci=0;typeName(()=>{ci=0;setTimeout(typeRole,600);});
 })();
 
 /* ═══════════════════ COUNTERS ═══════════════════ */
 const prefRed=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 function animCounter(el,target,fmt,suffix,dur){
-  if(prefRed){ el.textContent=(fmt==='k'&&target>=1000?Math.round(target/1000)+'K':target)+(suffix||''); return; }
+  if(prefRed){el.textContent=(fmt==='k'&&target>=1000?Math.round(target/1000)+'K':target)+(suffix||'');return;}
   const start=performance.now();
   const run=now=>{
     const p=Math.min((now-start)/dur,1);
     const e=1-Math.pow(1-p,3);
     const v=Math.floor(e*target);
     el.textContent=(fmt==='k'&&v>=1000?(v/1000).toFixed(v>=10000?0:1)+'K':v)+(p>=1?(suffix||''):'');
-    if(p<1) requestAnimationFrame(run);
+    if(p<1)requestAnimationFrame(run);
     else el.textContent=(fmt==='k'&&target>=1000?Math.round(target/1000)+'K':target)+(suffix||'');
   };
   requestAnimationFrame(run);
 }
 let countersRun=false;
-new IntersectionObserver(en=>{ if(en[0].isIntersecting&&!countersRun){ countersRun=true; document.querySelectorAll('.counter').forEach(el=>animCounter(el,+el.dataset.target,el.dataset.fmt||'',el.dataset.suffix||'',1800)); } },{threshold:.3}).observe(document.getElementById('hero'));
+new IntersectionObserver(en=>{if(en[0].isIntersecting&&!countersRun){countersRun=true;document.querySelectorAll('.counter').forEach(el=>animCounter(el,+el.dataset.target,el.dataset.fmt||'',el.dataset.suffix||'',1800));}},{threshold:.3}).observe(document.getElementById('hero'));
 
 /* ═══════════════════ REVEAL ═══════════════════ */
 if(!prefRed){
-  const ro=new IntersectionObserver(en=>en.forEach((e,i)=>{ if(e.isIntersecting){ e.target.style.transitionDelay=(Array.from(e.target.parentElement.children).indexOf(e.target)%4)*60+'ms'; e.target.classList.add('in'); ro.unobserve(e.target); } }),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+  const ro=new IntersectionObserver(en=>en.forEach(e=>{if(e.isIntersecting){e.target.style.transitionDelay=(Array.from(e.target.parentElement.children).indexOf(e.target)%4)*60+'ms';e.target.classList.add('in');ro.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
-} else { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); }
+}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));}
 
 /* ═══════════════════ ACTIVE NAV ═══════════════════ */
 const secs=document.querySelectorAll('section[id]');
 const navAs=document.querySelectorAll('.sidebar .nav-item[data-section]');
-new IntersectionObserver(en=>en.forEach(e=>{ if(e.isIntersecting){ navAs.forEach(a=>{ const active=a.dataset.section===e.target.id; a.classList.toggle('active',active); if(active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); } }),{rootMargin:'-35% 0px -60% 0px'}).observe; // activate per section
-const io=new IntersectionObserver(en=>en.forEach(e=>{ if(e.isIntersecting){ navAs.forEach(a=>{ const act=a.dataset.section===e.target.id; a.classList.toggle('active',act); if(act) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); } }),{rootMargin:'-38% 0px -58% 0px'});
+const io=new IntersectionObserver(en=>en.forEach(e=>{if(e.isIntersecting){navAs.forEach(a=>{const act=a.dataset.section===e.target.id;a.classList.toggle('active',act);if(act)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}}),{rootMargin:'-38% 0px -58% 0px'});
 secs.forEach(s=>io.observe(s));
 
 /* ═══════════════════ SKILL BARS ═══════════════════ */
-const barsObserver=new IntersectionObserver(en=>{ if(en[0].isIntersecting){ document.querySelectorAll('.sbar-fill').forEach(bar=>{ const w=bar.dataset.w; if(!prefRed) setTimeout(()=>bar.style.width=w+'%',200); else bar.style.width=w+'%'; }); barsObserver.disconnect(); } },{threshold:.3});
+const barsObs=new IntersectionObserver(en=>{if(en[0].isIntersecting){document.querySelectorAll('.sbar-fill').forEach(bar=>{const w=bar.dataset.w;if(!prefRed)setTimeout(()=>bar.style.width=w+'%',200);else bar.style.width=w+'%';});barsObs.disconnect();}},{threshold:.3});
 const barsSection=document.querySelector('.skill-bars');
-if(barsSection) barsObserver.observe(barsSection);
+if(barsSection)barsObs.observe(barsSection);
 
 /* ═══════════════════ PROJECT FILTERS ═══════════════════ */
 document.querySelectorAll('.filter-btn').forEach(btn=>{
@@ -917,38 +931,235 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
     const f=btn.dataset.filter;
     document.querySelectorAll('.proj-card').forEach(card=>{
       const tags=card.dataset.tags||'';
-      const show=f==='all'||tags.includes(f);
-      card.classList.toggle('hidden',!show);
+      card.classList.toggle('hidden',f!=='all'&&!tags.includes(f));
     });
-    showToast('🔍',f==='all'?'Showing all projects':`Filtered: ${btn.textContent}`,'info');
+    showToast('🔍',f==='all'?'Showing all 6 projects':`Filtered: ${btn.textContent}`,'info');
   });
 });
 
 /* ═══════════════════ MODAL ═══════════════════ */
-function openModal(){ document.getElementById('cvModal').classList.add('open'); document.getElementById('modalClose').focus(); }
-function closeModal(){ document.getElementById('cvModal').classList.remove('open'); }
+function openModal(){document.getElementById('cvModal').classList.add('open');document.getElementById('downloadCvBtn').focus();}
+function closeModal(){document.getElementById('cvModal').classList.remove('open');}
 document.getElementById('modalClose').addEventListener('click',closeModal);
-document.getElementById('cvModal').addEventListener('click',e=>{ if(e.target===e.currentTarget) closeModal(); });
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+document.getElementById('cvModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ═══════════════════ CV DOWNLOAD ═══════════════════ */
+function downloadCV(){
+  const btn=document.getElementById('downloadCvBtn');
+  const progress=document.getElementById('cvProgress');
+  const fill=document.getElementById('cvProgressFill');
+
+  // Show progress bar
+  progress.classList.add('show');
+  btn.disabled=true;
+  btn.innerHTML='<svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg> Preparing…';
+
+  // Animate progress bar
+  setTimeout(()=>{fill.style.width='60%';},100);
+  setTimeout(()=>{fill.style.width='100%';},600);
+
+  setTimeout(()=>{
+    // Generate CV as a downloadable HTML file styled as a professional CV
+    const cvContent = generateCVContent();
+    const blob = new Blob([cvContent], {type:'text/html;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Aman_Singh_CV.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    showToast('✅','CV downloaded successfully!','success');
+    closeModal();
+
+    // Reset button
+    btn.disabled=false;
+    btn.innerHTML='<svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg> Download CV';
+    progress.classList.remove('show');
+    fill.style.width='0';
+  }, 900);
+}
+
+function generateCVContent(){
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Aman Singh — CV</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#1a1a1a;background:#fff;line-height:1.55}
+  @media print{body{font-size:11px}.no-print{display:none}@page{margin:15mm}}
+  .page{max-width:820px;margin:0 auto;padding:36px 40px}
+  .header{background:#1B3A6B;color:#fff;padding:28px 32px;border-radius:6px;margin-bottom:22px}
+  .header h1{font-size:26px;font-weight:700;letter-spacing:1px;margin-bottom:5px}
+  .header .sub{font-size:12px;color:#AACCEE;letter-spacing:.5px;margin-bottom:10px}
+  .header .contacts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:11px;color:#88BBDD}
+  .section-title{font-size:11px;font-weight:700;color:#1B3A6B;text-transform:uppercase;letter-spacing:2px;border-bottom:2px solid #1B3A6B;padding-bottom:4px;margin:18px 0 10px}
+  .summary{color:#444;font-size:12.5px;line-height:1.7}
+  .skills-table{width:100%;border-collapse:collapse}
+  .skills-table td{padding:4px 6px;font-size:12px;vertical-align:top}
+  .skills-table td:first-child{color:#1B3A6B;font-weight:600;width:160px;white-space:nowrap}
+  .skills-table td:last-child{color:#444}
+  .job-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px}
+  .job-title{font-weight:700;font-size:13px;color:#1a1a1a}
+  .job-period{font-size:11px;color:#0077A8;font-weight:600}
+  .job-org{font-size:11.5px;color:#0077A8;margin-bottom:3px}
+  .job-desc{font-size:11px;color:#777;font-style:italic;margin-bottom:6px}
+  .bullets{padding-left:0;list-style:none}
+  .bullets li{font-size:12px;color:#444;padding:2px 0 2px 14px;position:relative;line-height:1.6}
+  .bullets li::before{content:'▸';color:#0077A8;position:absolute;left:0;font-size:10px;top:3px}
+  .proj-block{margin-bottom:12px}
+  .proj-title{font-weight:700;font-size:12.5px;color:#1a1a1a;margin-bottom:2px}
+  .proj-tools{font-size:10.5px;color:#0077A8;margin-bottom:3px}
+  .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px}
+  .cert-item{display:flex;align-items:flex-start;gap:6px;font-size:12px;padding:3px 0}
+  .cert-dot{width:6px;height:6px;border-radius:50%;background:#0077A8;margin-top:4px;flex-shrink:0}
+  .cert-name{color:#1a1a1a;font-weight:600}
+  .cert-issuer{color:#777;font-size:10.5px}
+  .edu-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px}
+  .edu-deg{font-weight:700;font-size:12.5px}
+  .edu-yr{color:#0077A8;font-size:11px;font-weight:600}
+  .edu-sch{font-size:11.5px;color:#555;margin-bottom:8px}
+  .print-btn{position:fixed;bottom:24px;right:24px;background:#1B3A6B;color:#fff;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .print-btn:hover{background:#0077A8}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>AMAN SINGH</h1>
+    <div class="sub">MIS Executive &nbsp;·&nbsp; Data Analyst &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Advanced Excel &nbsp;·&nbsp; SQL</div>
+    <div class="contacts">
+      <span>📍 Mumbai, Maharashtra</span>
+      <span>📞 +91-9021304693</span>
+      <span>✉ singhaman123116@gmail.com</span>
+      <span>🔗 linkedin.com/in/aman-singh123114</span>
+      <span>🌐 aman123116.github.io</span>
+    </div>
+  </div>
+
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">Results-driven MIS Executive with hands-on experience in data reporting, analysis, dashboard creation, and business intelligence within the digital cinema distribution sector. Skilled in Advanced Excel, Power BI, SQL, data cleaning, and reporting automation. Experienced in handling large datasets, generating actionable insights, and supporting business operations through accurate, timely reporting. Seeking opportunities as a Data Analyst or MIS Executive to deliver data-driven insights that directly support operational decisions.</p>
+
+  <div class="section-title">Technical Skills</div>
+  <table class="skills-table">
+    <tr><td>Analytics & Reporting</td><td>MIS Reporting, Data Analysis, Data Cleaning & Validation, Data Visualization, Dashboard Development</td></tr>
+    <tr><td>Advanced Excel</td><td>Pivot Tables, Pivot Charts, VLOOKUP, XLOOKUP, IF Functions, Conditional Formatting, Power Query, VBA & Macros</td></tr>
+    <tr><td>Power BI</td><td>Data Modeling, Power Query, Dashboard Creation, DAX (Measures & Calculated Columns), Accessibility Design</td></tr>
+    <tr><td>SQL</td><td>Joins, Aggregations, Subqueries, Filtering, Data Retrieval & Validation for Reporting</td></tr>
+    <tr><td>Tools & Platforms</td><td>Microsoft Excel 365, Power BI Desktop, GitHub, GitHub Pages</td></tr>
+    <tr><td>Linux & Tech Support</td><td>Server Monitoring, Basic Linux Commands, Incident Monitoring, Technical Troubleshooting</td></tr>
+    <tr><td>Soft Skills</td><td>Analytical Thinking, Problem Solving, Attention to Detail, Communication, Time Management</td></tr>
+  </table>
+
+  <div class="section-title">Professional Experience</div>
+  <div class="job-header"><span class="job-title">MIS Executive &nbsp;|&nbsp; UFO Moviez India Limited</span><span class="job-period">Feb 2026 – Present</span></div>
+  <div class="job-org">Digital cinema distribution company operating 1,500+ screens across India</div>
+  <ul class="bullets">
+    <li>Design, automate, and maintain daily, weekly, and monthly MIS reports using Advanced Excel, improving report delivery timelines and accuracy.</li>
+    <li>Analyse large datasets to identify trends, anomalies, and business performance indicators across cinema operations.</li>
+    <li>Build automated reporting solutions using Pivot Tables, Power Query, and data validation techniques, reducing manual effort in recurring reports.</li>
+    <li>Perform data cleaning and quality checks to ensure reporting integrity and consistency across business units.</li>
+    <li>Collaborate with cross-functional teams to collect, validate, and consolidate operational data for reporting.</li>
+    <li>Assist the technical operations team with Linux server monitoring and incident logging, ensuring data pipeline continuity.</li>
+  </ul>
+
+  <div class="section-title">Projects</div>
+
+  <div class="proj-block">
+    <div class="proj-title">E-Commerce Sales Analysis Dashboard</div>
+    <div class="proj-tools">Tools: Power BI, Excel</div>
+    <ul class="bullets">
+      <li>Analysed 22,000+ sales records to uncover top-performing product categories, seasonal sales trends, and customer purchasing patterns.</li>
+      <li>Performed end-to-end data cleaning, transformation, and modelling using Power Query to ensure data integrity before visualisation.</li>
+      <li>Designed interactive dashboards featuring KPIs, slicers, filters, and drill-through analysis for stakeholder reporting.</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="proj-title">Adventure Works Quarterly Regional Sales Report</div>
+    <div class="proj-tools">Tools: Power BI, Data Visualization, Accessibility Design</div>
+    <ul class="bullets">
+      <li>Redesigned a regional sales report in Power BI with a focus on accessibility for all users, including visually impaired users.</li>
+      <li>Added descriptive titles, alt text for all visuals, high-contrast colour schemes, and chart markers for low-vision users.</li>
+      <li>Optimised tab order for keyboard navigation — fully usable without a mouse.</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="proj-title">Excel Executive Data Summary</div>
+    <div class="proj-tools">Tools: Excel (SUMIF, SUMIFS, IF Functions, YoY Analysis)</div>
+    <ul class="bullets">
+      <li>Built an executive-level Q1 profit margin summary comparing current year vs previous year results using SUMIF and SUMIFS.</li>
+      <li>Delivered Year-over-Year percentage analysis, business logic validation, and executive-ready monthly/quarterly performance reporting.</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="proj-title">Sales Executive Performance Dashboard</div>
+    <div class="proj-tools">Tools: Excel (VBA, Macros, Pivot Tables, Slicers)</div>
+    <ul class="bullets">
+      <li>Built multi-city Excel dashboard analysing sales performance across Chennai, Delhi, Patna, and Ranchi with 4 interactive views.</li>
+      <li>Integrated VBA Macros for dynamic interactivity, slicers for city switching, and Target vs Actual analysis via Bar, Line & Pie Charts.</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="proj-title">Tailwind Traders BI Solution &nbsp;<em style="font-weight:400;color:#777">(Microsoft Power BI Certification Capstone)</em></div>
+    <div class="proj-tools">Tools: Power BI, Excel, DAX, Power Query</div>
+    <ul class="bullets">
+      <li>Engineered end-to-end sales data pipeline in Excel; configured 4 multi-source datasets with 100% data quality validation in Power Query.</li>
+      <li>Designed a 6-table relational data model with a DAX Calendar table and calculated Sales in USD table for multi-currency reporting.</li>
+      <li>Built time-intelligence DAX measures (Yearly, Quarterly, YTD Profit Margin) optimised to sub-200ms via Performance Analyzer.</li>
+      <li>Published mobile-optimised Executive Dashboard in Power BI Service with automated revenue alerts and weekly subscriptions.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Certifications</div>
+  <div class="cert-grid">
+    <div class="cert-item"><div class="cert-dot"></div><div><div class="cert-name">Microsoft Power BI Data Analyst</div><div class="cert-issuer">Microsoft</div></div></div>
+    <div class="cert-item"><div class="cert-dot"></div><div><div class="cert-name">Google Data Analytics Professional Certificate</div><div class="cert-issuer">Google · Coursera</div></div></div>
+    <div class="cert-item"><div class="cert-dot"></div><div><div class="cert-name">SQL for Data Science</div><div class="cert-issuer">Coursera</div></div></div>
+    <div class="cert-item"><div class="cert-dot"></div><div><div class="cert-name">Master Microsoft Excel</div><div class="cert-issuer">LinkedIn Learning</div></div></div>
+    <div class="cert-item"><div class="cert-dot"></div><div><div class="cert-name">Introduction to Generative AI</div><div class="cert-issuer">Coursera</div></div></div>
+  </div>
+
+  <div class="section-title">Education</div>
+  <div class="edu-row"><span class="edu-deg">Bachelor of Science in Information Technology (B.Sc. IT)</span><span class="edu-yr">2025</span></div>
+  <div class="edu-sch">Viva College of Arts, Commerce & Science, Virar</div>
+  <div class="edu-row"><span class="edu-deg">Higher Secondary Certificate (HSC)</span><span class="edu-yr">2022</span></div>
+  <div class="edu-sch">Vidya Vikasini Junior College, Vasai</div>
+  <div class="edu-row"><span class="edu-deg">Secondary School Certificate (SSC)</span><span class="edu-yr">2020</span></div>
+  <div class="edu-sch">Kalindi English High School, Vasai</div>
+</div>
+<button class="print-btn no-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>`;
+}
 
 /* ═══════════════════ FORM SUBMIT ═══════════════════ */
 function handleFormSubmit(){
   const name=document.getElementById('fname').value.trim();
   const email=document.getElementById('femail').value.trim();
   const msg=document.getElementById('fmsg').value.trim();
-  if(!name){ showToast('⚠️','Please enter your name.','warn'); document.getElementById('fname').focus(); return; }
-  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showToast('⚠️','Please enter a valid email.','warn'); document.getElementById('femail').focus(); return; }
-  if(!msg){ showToast('⚠️','Please write a message.','warn'); document.getElementById('fmsg').focus(); return; }
+  if(!name){showToast('⚠️','Please enter your name.','warn');document.getElementById('fname').focus();return;}
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showToast('⚠️','Please enter a valid email.','warn');document.getElementById('femail').focus();return;}
+  if(!msg){showToast('⚠️','Please write a message.','warn');document.getElementById('fmsg').focus();return;}
   const btn=document.getElementById('submitBtn');
-  btn.textContent='Sending…'; btn.disabled=true;
+  btn.textContent='Sending…';btn.disabled=true;
   setTimeout(()=>{
     const subject=encodeURIComponent(document.getElementById('fsubject').value||'Portfolio Contact');
     const body=encodeURIComponent(`Hi Aman,\n\nName: ${name}\nEmail: ${email}\n\n${msg}`);
     window.location.href=`mailto:singhaman123116@gmail.com?subject=${subject}&body=${body}`;
     showToast('✅','Message ready! Your email client will open.','success');
-    btn.textContent='Send message'; btn.disabled=false;
+    btn.textContent='Send message';btn.disabled=false;
     ['fname','femail','fsubject','fmsg'].forEach(id=>document.getElementById(id).value='');
-  }, 900);
+  },900);
 }
 </script>
 </body>
